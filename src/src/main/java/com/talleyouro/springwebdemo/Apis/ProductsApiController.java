@@ -68,6 +68,7 @@ public class ProductsApiController {
                 .map(existing -> {
                     existing.setName(productRequest.getName());
                     existing.setPrice(productRequest.getPrice());
+                    existing.setAvailable(productRequest.isAvailable());
                     existing.setCreated_at(productRequest.getCreated_at());
                     existing.setDeleted_at(productRequest.getDeleted_at());
                     existing.setUpdated_at(Date.from(Instant.now()));
