@@ -1,2 +1,2 @@
 # springbootmvcpostgres
-Java Spring Web demo powered by Postgres,Thymeleaf ,Javascript,Vue
+Java Spring Web demo powered by Postgres,Thymeleaf ,Javascript,Vue,Spring JPA,IntelliJIDEA

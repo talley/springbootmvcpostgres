@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
+
+</head>
+<body>
+<table id="myTable" class="display">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>price</th>
+        <th>availabe</th>
+        <th>created_at</th>
+        <th>updated_at</th>
+        <th>deleted_at</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.available}"></td>
+        <td th:text="${product.created_at}"></td>
+        <td th:text="${product.updated_at}"></td>
+        <td th:text="${product.deleted_at}"></td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    } );
+</script>
+</body>
+</html>

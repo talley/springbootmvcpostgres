@@ -1,0 +1,43 @@
+The controller has this method below
+
+@GetMapping("/products/edit")
+    public String edit(@RequestParam(value = "id", required = true) Long id, Model model) {
+        var product=productsRepository.findById(id).get();
+        model.addAttribute("product", product);
+        return "edit_product";
+    }
+
+ edit_product.html is below but is not output the product data
+
+  <table>
+      <tbody>
+       <tr>
+           <th>id</th>
+           <td><input type="text" name="id" value="${product.id}" readonly></td>
+       </tr>
+      <tr>
+          <th>name</th>
+          <td><input type="text" name="name" value="${product.name}"></td>
+      </tr>
+      <tr>
+          <th>price</th>
+          <td><input type="text" name="price" value="${product.price}"></td>
+      </tr>
+      <tr>
+          <th>availabe</th>
+          <td><input type="text" name="availabe" value="${product.availabe}"></td>
+      </tr>
+      <tr>
+          <th>created_at</th>
+          <td><input type="text" name="created_at" value="${product.created_at}"></td>
+      </tr>
+      <tr>
+          <th>updated_at</th>
+          <td><input type="text" name="updated_at" value="${product.updated_at}"></td>
+      </tr>
+      <tr>
+          <th></th>
+          <td><input type="submit" value="Update"></td>
+      </tr>
+      </tbody>
+  </table>

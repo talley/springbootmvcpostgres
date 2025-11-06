@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Product</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+ <table>
+     <tbody>
+      <tr>
+          <th>id</th>
+          <td><input type="text" name="id" th:value="${product.id}" readonly></td>
+      </tr>
+     <tr>
+         <th>name</th>
+         <td><input type="text" name="name" th:value="${product.name}"></td>
+     </tr>
+     <tr>
+         <th>price</th>
+         <td><input type="text" name="price" th:value="${product.price}"></td>
+     </tr>
+     <tr>
+         <th>available</th>
+         <td><input type="text" name="availabe" th:value="${product.available}"></td>
+     </tr>
+     <tr>
+         <th>created_at</th>
+         <td><input type="text" name="created_at" th:value="${product.created_at}"></td>
+     </tr>
+     <tr>
+         <th>updated_at</th>
+         <td><input type="text" name="updated_at" th:value="${product.updated_at}"></td>
+     </tr>
+     <tr>
+         <th></th>
+         <td><input type="submit" value="Update"></td>
+     </tr>
+     </tbody>
+ </table>
+</body>
+</html>
